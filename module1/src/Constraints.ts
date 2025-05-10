@@ -37,11 +37,29 @@ const student3 = addCourse({
 
     type Owner2=keyof Vehicle //Better Approach
     
-    const person:Owner2="bike"
+ 
+
+
+    const user={
+        name:"Tamjid AHmed",
+        age:34,
+        address:"ctg"
+    }
+    const person = {
+  name: "Alice",
+  age: 30,
+  isAdmin: "yes"
+    };
 
 
 
+    const constraints=<X,Y extends keyof X>(obj:X,key:Y)=>{
+        return obj[key]
 
+    }
+
+
+const result=constraints(user,'name')
 
 
 
