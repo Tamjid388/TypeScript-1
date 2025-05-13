@@ -11,15 +11,15 @@ This repository contains my learning journey with TypeScript. I'm using this spa
 - Functions and classes
 - Interfaces and objects
 - Generics
-- Modules and namespaces
 - Advanced TypeScript features
+- Object Oriented TypeScript 
 
-I will be adding small projects and code examples here as I work through various topics.
+
 
 ## 🛠️ Technologies Used
 
 - TypeScript
-- [Other technologies or libraries you may use in the future]
+
 
 ## 🤝 Contributing
 

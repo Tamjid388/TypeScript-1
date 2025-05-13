@@ -38,35 +38,55 @@
 
 }
 {
+  class ParentClass {
+    name: string;
+    age: number;
+    address: string
+    constructor(name: string, age: number, address: string) {
+      this.name = name;
+      this.age = age;
+      this.address = address;
+
+    }
+    method() {
+      console.log("COmmon method");
+    }
+  }
+
+
   // Student Class
-  class Student{
-    constructor(public name:string,public age:string){
+  class Student extends ParentClass {
+    constructor(name: string, age: number, address: string) {
+      super(name, age, address)
+    }
 
-    }
-    methodd(num:number){
-       console.log(this.name+num)
-    }
   }
-  const ob1=new Student("Tamjid","32")
-  ob1.methodd(21)
-  
-// Teacher Class
-  class Teacher{
-    name:string;
-    age:number;
-    address:string
-    constructor(name:string, age:number, address:string){
-      this.name=name;
-      this.age=age;
-      this.address=address;
+
+
+  const ob1 = new Student("Tamjid", 33, "dhaka")
+  // ob1.methodd(21)
+
+  // Teacher Class
+  class Teacher {
+    name: string;
+    age: number;
+    address: string
+    constructor(name: string, age: number, address: string) {
+      this.name = name;
+      this.age = age;
+      this.address = address;
 
     }
-    NoOfDegrees(num:number){
+    method() {
+      console.log("COmmon method");
+    }
+
+    NoOfDegrees(num: number) {
       console.log(`${this.name} has ${num} Degrees`);
-      
+
     }
   }
-  const teacher=new Teacher("MMA",32,"Mirpur")
+  const teacher = new Teacher("MMA", 32, "Mirpur")
   teacher.NoOfDegrees(2)
 
 
