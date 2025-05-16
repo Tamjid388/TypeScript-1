@@ -39,7 +39,7 @@
     // A type guard is a way to narrow down the type of an object within a conditional block.
     //  In TypeScript, the instanceof operator is one of the common type guards.
     //  It helps you check the runtime type of an object and narrow the type to that class.
-   
+
     class Animal {
         name: string;
         species: string;
@@ -95,8 +95,36 @@
 
     }
 
-    describeAnimals(dog)
 
+    describeAnimals(dog)
+    // Another Option]
+
+    const isDog = (animal: Animal): animal is Dog => {
+        return animal instanceof Dog
+
+    }
+
+    const isCat = (animal: Animal): animal is Cat => {
+        return animal instanceof Cat
+
+    }
+
+    
+    const describeAnimals2 = (animal: Animal) => {
+        if (isDog(animal)) {
+            animal.bark()
+        }
+        else if (isCat(animal)) {
+            animal.meow()
+        }
+        else {
+            animal.sound()
+        }
+
+
+    }
+
+    describeAnimals2(dog)
 
 
 
